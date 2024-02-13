@@ -23,96 +23,98 @@ class FingarIdScreen extends StatelessWidget {
             ),
           ),
           child: SafeArea(
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 75.h, horizontal: 10.w),
-              child: Column(
-                children: [
-                  Image.asset("assets/images/fingar-id.png"),
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.w),
-                    child: Text(
-                      "Use Touch ID to \n authorise payments",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 30.sp,
-                          color: const Color.fromRGBO(28, 25, 57, 1)),
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 75.h, horizontal: 10.w),
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/fingar-id.png"),
+                    SizedBox(
+                      height: 30.h,
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 55.w),
-                    child: Text(
-                      "Activate touch ID so you don’t need \n to confirm your PIN every time you \n want to use BLUE",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: const Color.fromRGBO(28, 25, 57, 0.8),
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15.sp),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 75.h,
-                  ),
-                  SizedBox(
-                    width: 259.w,
-                    height: 40.h,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(
-                                builder: (context) => const HomeScreen()),
-                            (Route route) => false);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0.sp),
-                        ),
-                        backgroundColor: AppColors.primaryColor,
-                      ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.w),
                       child: Text(
-                        'Active Now',
+                        "Use Touch ID to \n authorise payments",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Colors.white,
                             fontWeight: FontWeight.w700,
+                            fontSize: 30.sp,
+                            color: const Color.fromRGBO(28, 25, 57, 1)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 55.w),
+                      child: Text(
+                        "Activate touch ID so you don’t need \n to confirm your PIN every time you \n want to use BLUE",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color.fromRGBO(28, 25, 57, 0.8),
+                            fontWeight: FontWeight.w400,
                             fontSize: 15.sp),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  SizedBox(
-                    width: 259.w,
-                    height: 40.h,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(
-                                builder: (context) => const HomeScreen()),
-                            (Route route) => false);
-                      },
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0.sp),
+                    SizedBox(
+                      height: 75.h,
+                    ),
+                    SizedBox(
+                      width: 259.w,
+                      height: 40.h,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                  builder: (context) => const HomeScreen()),
+                              (Route route) => false);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0.sp),
+                          ),
+                          backgroundColor: AppColors.primaryColor,
                         ),
-                        backgroundColor: AppColors.greyColor,
-                      ),
-                      child: Text(
-                        'Skip this',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 15.sp),
+                        child: Text(
+                          'Active Now',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15.sp),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    SizedBox(
+                      width: 259.w,
+                      height: 40.h,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                  builder: (context) => const HomeScreen()),
+                              (Route route) => false);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0.sp),
+                          ),
+                          backgroundColor: AppColors.greyColor,
+                        ),
+                        child: Text(
+                          'Skip this',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15.sp),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
